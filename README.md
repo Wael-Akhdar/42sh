@@ -2,6 +2,13 @@
 
 > **Privacy Note:** The source code of this project is kept private to comply with EPITA's anti-plagiarism regulations. The code is structured, commented, and available upon request for recruiters during an interview. This repository serves as a technical showcase and provides a testable compiled version.
 
+
+### 👥 The Team
+* **[Wael Akhdar](Ton_Lien_GitHub)**
+* **[Youcef Zahra](https://github.com/youcefzahra)**
+* **[Jessim Ziani](https://github.com/jessim-ziani)**
+* **[Louis-Maximilien Chappuit](https://github.com/louischap31)**
+
 ## 📖 Project Context
 
 The **42sh** project is a core EPITA curriculum requirement. The goal is to recreate a complete command interpreter (shell) from scratch, complying with the POSIX standard. This project requires a deep understanding of UNIX system programming, language theory (Lexer/Parser), and software architecture.
@@ -57,3 +64,4 @@ tar -xvf 42sh_release.tar.gz
 chmod +x 42sh
 ./42sh
 ```
+
