@@ -6,6 +6,8 @@
 
 The **42sh** project is a core EPITA curriculum requirement. The goal is to recreate a complete command interpreter (shell) from scratch, complying with the POSIX standard. This project requires a deep understanding of UNIX system programming, language theory (Lexer/Parser), and software architecture.
 
+**My Role:** I led the team development of this UNIX shell as **Project Manager and Git Administrator**. I managed the entire development cycle, coordinated the team, and personally designed the core of the interpreter: the Parser and the AST generation logic.
+
 ## ✨ Implemented Features
 
 All of the following features were developed in C and are fully operational:
@@ -23,11 +25,11 @@ All of the following features were developed in C and are fully operational:
 
 ## 🏗️ Technical Architecture
 
-The shell operates on a classic compilation/interpretation pipeline:
+The shell operates on a classic compilation/interpretation pipeline. As the core architect of the parsing phase, the structure is defined as follows:
 
-1.  **Lexer (Lexical Analysis):** Reads standard input (or script) character by character and generates a stream of "Tokens" (Words, Operators, Redirections).
-2.  **Parser (Syntax Analysis):** Consumes tokens to build an Abstract Syntax Tree (AST). Each node represents a structure (Command, Condition, Loop, Pipeline).
-3.  **Execution (AST Traversal):** The tree is traversed recursively. Redirections modify file descriptors (`dup2`), child processes are created (`fork`), and commands are executed.
+1. **Lexer (Lexical Analysis):** Reads standard input (or script) character by character and generates a stream of "Tokens" (Words, Operators, Redirections).
+2. **Parser (Syntax Analysis) [My Core Contribution]:** I implemented a syntax analyzer that transforms the token stream into a complex Abstract Syntax Tree (AST). This module strictly manages the nesting of control structures and enforces the rigid grammar of the Shell Command Language.
+3. **Execution (AST Traversal):** The tree is traversed recursively. Redirections modify file descriptors (`dup2`), child processes are created (`fork`), and commands are executed.
 
 ## 🧠 Technical Challenges Solved
 
@@ -46,10 +48,12 @@ The shell operates on a classic compilation/interpretation pipeline:
 
 A pre-compiled version of the shell is available for testing.
 
-1.  Go to the **[Releases](../../releases)** section.
-2.  Download the archive containing the `42sh` executable.
-3.  Open a terminal in a Linux environment (or WSL on Windows) and run the executable:
+1. Go to the **[Releases](../../releases)** section.
+2. Download the archive containing the `42sh` executable.
+3. Open a terminal in a Linux environment (or WSL on Windows) and run the executable:
 
 ```bash
+tar -xvf 42sh_release.tar.gz
 chmod +x 42sh
 ./42sh
+```
