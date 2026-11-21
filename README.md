@@ -44,6 +44,10 @@ The shell operates on a classic compilation/interpretation pipeline. As the core
 * **Version Control:** Git
 * **Testing:** Custom Bash testsuite for non-regression validation.
 
+## 🛠️ Skills
+
+`C` · `Git` · `POSIX` · `Unix`
+
 ## 🎯 How to test the project?
 
 A pre-compiled version of the shell is available for testing.
@@ -59,7 +63,7 @@ chmod +x 42sh
 ```
 
 ### 👥 The Team
-* **[Wael Akhdar]()**
+* **[Wael Akhdar](https://github.com/Wael-Akhdar)**
 * **[Youcef Zahra](https://github.com/youcefzahra)**
 * **[Jessim Ziani](https://github.com/jessim-ziani)**
 * **[Louis-Maximilien Chappuit](https://github.com/louischap31)**
